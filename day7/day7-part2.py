@@ -1,20 +1,6 @@
 from functools import total_ordering
 from collections import Counter
-d={
-    'A':13,
-    'K':12,
-    'Q':11,
-    'T':10,
-    '9':9,
-    '8':8,
-    '7':7,
-    '6':6,
-    '5':5,
-    '4':4,
-    '3':3,    
-    '2':2,
-    'J':1
-}
+d={'A':13,'K':12,'Q':11,'T':10,'9':9,'8':8,'7':7,'6':6,'5':5,'4':4,'3':3,'2':2,'J':1}
 @total_ordering
 class Cart:
     def __init__(self,strength,bid,old_strength):
@@ -26,7 +12,7 @@ class Cart:
     def __lt__(self, other):
         a=Counter(self.strength).values()
         b=Counter(other.strength).values()
-        if len(a)==len(b)   :
+        if len(a)==len(b):
             if len(a)==2:
                 if (max(a)==4 and max(b)==4) or (max(a)==3 and max(b)==3):
                     for i,j in zip(self.old_strength,other.old_strength):

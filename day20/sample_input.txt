@@ -1,0 +1,5 @@
+broadcaster -> ax, bx, cx
+%ax -> bx
+%bx -> cx
+%cx -> in
+&in -> ax
